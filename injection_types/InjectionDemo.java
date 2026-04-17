@@ -70,7 +70,7 @@ public class InjectionDemo {
         
         System.out.println("\nSetter injection");
         SetterExample s = new SetterExample();
-        s.notify("Before setter");
+        s.notify("Before setter"); 
         s.setMessageService(new EmailService());
         s.notify("After setter");
         s.setMessageService(new SmsService());

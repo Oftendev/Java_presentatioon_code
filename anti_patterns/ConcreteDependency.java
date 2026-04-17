@@ -1,6 +1,6 @@
 package anti_patterns;
 
-public class ConcreteDependency {
+public class ConcreteDependency { //зависимость от конкретной реализации
     //создаём конкретный класс без интерфейса
     static class SqlDatabase {
         public void save(String data) {
@@ -23,8 +23,4 @@ public class ConcreteDependency {
         UserService service = new UserService(db);
         service.saveUser("Ivan");
     }
-    /* 
-    минусы - ПРЯМОЕ нарушение D из SOLID (Dependency Inversion Principle) (высокоуровневые модули не должны зависить от низкоуровневых)
-    + из-за жёсткого связывания неудобно к примеру изменить способ хранения в другой базе данных
-    */
 }

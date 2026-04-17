@@ -35,9 +35,6 @@ public class BastardInjection {
         //при работе можно случайно вызвать пустой конструктор
         PaymentService service = new PaymentService();
         service.processPayment(100); 
-        /* 
-        Минус - само наличие второго конструктора создаёт иллюзию, что у класса нет внешних зависимостей +
-        можно перепутать контрукторы + нарушение Dependency Inversion Principle (высокоуровневый модуль зависит от низкоуровнего) 
-        */   
+        
     }
 }
